@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fun Facts Generator</h1>
+        <p id="fact"></p>
+        <button onclick="generateFact()">Get a Fun Fact!</button>
+    </div>
+    <script>
+        const facts = [
+            "Earth is the only planet not named after a god.",
+            "About 71% of Earth's surface is covered by water.",
+            "Earth has a powerful magnetic field that protects it from solar winds.",
+            "The highest point on Earth is Mount Everest, which is 29,029 feet tall.",
+            "Earth is the third planet from the Sun.",
+            "The Earth's rotation is gradually slowing down.",
+            "Earth's atmosphere is composed of 78% nitrogen and 21% oxygen.",
+            "The Great Wall of China is not visible from space with the naked eye.",
+            "Earth is home to millions of species of plants and animals.",
+            "The Earth's core is as hot as the surface of the sun."
+        ];
+
+        function generateFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').innerText = facts[randomIndex];
+        }
+    </script>
+</body>
+</html>
